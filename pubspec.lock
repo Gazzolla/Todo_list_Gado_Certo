@@ -528,6 +528,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  quickalert:
+    dependency: "direct main"
+    description:
+      name: quickalert
+      sha256: b5d62b1e20b08cc0ff5f40b6da519bdc7a5de6082f13d90572cf4e72eea56c5e
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  reactive_forms:
+    dependency: "direct main"
+    description:
+      name: reactive_forms
+      sha256: b7d64d8fe45c19f506c762e219f4c6a3bdcfc4842d6fba98f866be5fca75d8e5
+      url: "https://pub.dev"
+    source: hosted
+    version: "16.1.1"
   shelf:
     dependency: transitive
     description:

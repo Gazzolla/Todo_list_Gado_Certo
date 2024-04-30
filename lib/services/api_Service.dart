@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:gado_certo_todo_list/shared/config/globals.dart';
 
 class ApiService {
   static Dio get dio => _dio;
@@ -8,7 +9,7 @@ class ApiService {
   static final Dio _dio = Dio(
     BaseOptions(
       contentType: ContentType.json.value,
-      baseUrl: 'https://api01.flowch.com/',
+      baseUrl: 'https://gc-api-todo.vercel.app/jeferson-gazzola',
       connectTimeout: const Duration(seconds: 30),
       receiveTimeout: const Duration(seconds: 30),
       headers: {
@@ -97,29 +98,6 @@ class ApiService {
         path,
         cancelToken: cancelToken,
         data: data,
-        options: options,
-        queryParameters: queryParameters,
-      );
-
-  static Future<Response> download(
-    String urlPath,
-    dynamic savePath, {
-    void Function(int, int)? onReceiveProgress,
-    Map<String, dynamic>? queryParameters,
-    CancelToken? cancelToken,
-    bool deleteOnError = true,
-    String lengthHeader = Headers.contentLengthHeader,
-    Object? data,
-    Options? options,
-  }) =>
-      _dio.download(
-        urlPath,
-        savePath,
-        cancelToken: cancelToken,
-        data: data,
-        deleteOnError: deleteOnError,
-        lengthHeader: lengthHeader,
-        onReceiveProgress: onReceiveProgress,
         options: options,
         queryParameters: queryParameters,
       );

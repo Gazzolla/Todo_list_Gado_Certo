@@ -27,7 +27,7 @@ class Task {
         // description: json['description'], //TODO
         sysCreationDate: DateTime.tryParse(json['criado_em'])?.toLocal(),
         sysUpdateDate: DateTime.tryParse(json['atualizado_em'])?.toLocal(),
-        startDate: DateTime.tryParse(json['startDate'])?.toLocal(),
+        startDate: DateTime.tryParse(json['startDate'] ?? "")?.toLocal(),
         status: json['status'] ?? TaskStatus.pending,
         color: json['color'] == null ? const Color.fromARGB(188, 172, 168, 168) : Color(json['color']),
       );
@@ -45,7 +45,7 @@ class Task {
 
 class TaskStatus {
   static String pending = "pending";
-  static String completed = "completed";
+  static String completed = "complete";
   static String expired = "expired";
   static String active = "active";
   static String archived = "archived";
